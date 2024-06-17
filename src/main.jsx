@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Filmes from './pages/Filmes.jsx'
-import PageNotFound from './pages/PageNotFound.jsx'
-import Contato from './pages/Contato.jsx'
-import Sobre from './pages/Sobre.jsx'
-import Home from './pages/Home.jsx'
+import App from './App'
+import Filmes from './Pages/Filmes'
+import Sobre from './Pages/Sobre'
+import Contato from './Pages/Contato'
+import PageNotFound from './Pages/PageNotFound'
+import Home from './Pages/Home'
+import PaginaFilmes from './Pages/paginaFilme'
 
 
 
@@ -18,10 +19,11 @@ const router = createBrowserRouter(
       element: <App/>,
       children: [
         {index: true, element: <Home/>},
-        {path: "Filmes", element: <Filmes/>},
+        {path: "filmes", element: <Filmes/>},
+        {path: "filmes/:id", element: <PaginaFilmes/>},
         {path: "sobre", element: <Sobre/>},
-        {path: "Contato", element: <Contato/>},
-        {path: "*", element: <PageNotFound/>},
+        {path: "contato", element: <Contato/>},
+        {path: "*", element: <PageNotFound/>}      
       ]
     }
   ]
@@ -29,6 +31,6 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </React.StrictMode>
+   <RouterProvider router={router}/>
+  </React.StrictMode>,
 )
