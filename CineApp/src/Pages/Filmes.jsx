@@ -10,7 +10,7 @@ function Filmes() {
     const urlImg = 'https://image.tmdb.org/t/p/w780/'
 
     useEffect( () => {
-        fetch(`${urlBase}popular?${apiKey}`)
+        fetch(`${urlBase}popular?${apiKey}&language=pt-BR`)
         .then(response => response.json())
         .then(response => setFilmes(response.results))
         .catch(erro => console.log(erro))
