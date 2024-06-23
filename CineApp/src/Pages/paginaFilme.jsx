@@ -20,8 +20,8 @@ function PaginaFilmes() {
     return (
         <div className="flex flex-col items-center text-center p-4">
             <img className="object-cover mb-4 w-2/4 h-2/4" src={`${urlImg}${filme.backdrop_path}`} alt={filme.title} />
-            <h1 className="text-2xl font-bold mb-4">{filme.title}</h1>
-            <p className="max-w-2xl">{filme.overview}</p>
+            <h1 className="text-white text-2xl font-bold mb-4">{filme.title}</h1>
+            <p className="text-white max-w-2xl">{filme.overview}</p>
         </div>
     );
 }

@@ -17,13 +17,13 @@ function Filmes() {
 
     return ( 
         <>
-        <h1 className="text-center text-2xl font-bold my-4">Filmes</h1>
+        <h1 className="text-center text-2xl font-bold my-4 text-white">Filmes</h1>
         <div className="flex flex-wrap justify-center gap-4">
         {
             filmes.map(filme => (
                 <div className="card-filme max-w-xs text-center" key={filme.id}>
-                    <img className="w-full h-72 object-cover mb-2" src={`${urlImg}${filme.poster_path}`} alt={filme.title} />
-                    <h2 className="text-lg font-semibold">{filme.title}</h2>
+                    <img className="w-full h-72 object-cover mb-2 text-white" src={`${urlImg}${filme.poster_path}`} alt={filme.title} />
+                    <h2 className="text-lg font-semibold text-white">{filme.title}</h2>
                     <Link to={`${filme.id}`} className="bg-blue-500 text-white py-2 px-4 rounded mt-2 inline-block">Saber mais</Link>
                 </div>
             ))

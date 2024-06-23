@@ -6,7 +6,7 @@ function Header() {
         <header className="flex bg-amber-500 p-4 text-white justify-around 	border-radius: 0.125rem;">
              <input className="bg-white rounded-md" type="text" id="buscar" placeholder='       Digite sua busca'/>
             <span>Olá, visitante!</span>
-            <h1>Bem vindo ao Cinema</h1>
+            <h1 className="text-white">Bem vindo ao Cinema</h1>
             <Navbar></Navbar>
         </header>
      );
